@@ -1,6 +1,5 @@
 import os
 from transformers import AutoTokenizer, AutoModelForCausalLM
-import kagglehub
 import pandas as pd
 from datasets import Dataset
 from transformers import DataCollatorForLanguageModeling, Trainer, TrainingArguments
@@ -16,10 +15,9 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Download the dataset from Kaggle using kagglehub
 # Example dataset: 'zynicide/wine-reviews' - change it to your dataset name
-dataset_path = kagglehub.dataset_download('jrobischon/wikipedia-movie-plots')
 
 # Load dataset into pandas (assuming it's a CSV file, adjust if different)
-df = pd.read_csv(dataset_path)
+df = pd.read_csv("./wikipedia-movie-plots")
 df = df[:1000]  # Limit to 1000 samples if necessary
 
 # Convert pandas dataframe to Hugging Face dataset
