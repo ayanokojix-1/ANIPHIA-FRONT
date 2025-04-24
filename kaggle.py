@@ -17,7 +17,7 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 # Example dataset: 'zynicide/wine-reviews' - change it to your dataset name
 
 # Load dataset into pandas (assuming it's a CSV file, adjust if different)
-df = pd.read_csv("./wikipedia-movie-plots-deduped.csv")
+df = pd.read_csv("./wikipedia_movie_plots_deduped.csv")
 df = df[:1000]  # Limit to 1000 samples if necessary
 
 # Convert pandas dataframe to Hugging Face dataset
