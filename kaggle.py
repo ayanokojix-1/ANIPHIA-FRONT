@@ -16,7 +16,7 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Download the dataset from Kaggle using kagglehub
 # Example dataset: 'zynicide/wine-reviews' - change it to your dataset name
-dataset_path = kagglehub.dataset_download('')
+dataset_path = kagglehub.dataset_download('jrobischon/wikipedia-movie-plots')
 
 # Load dataset into pandas (assuming it's a CSV file, adjust if different)
 df = pd.read_csv(dataset_path)
